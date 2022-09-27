@@ -1,0 +1,138 @@
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700';
+
+body {
+  background: silver;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.vertical-nav {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+}
+
+.page-content {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.4s;
+}
+
+p {
+  font-family: Cambria;
+  font-size: 1.05em;
+  font-weight: 300;
+  line-height: 1.5em;
+  position: relative;
+}
+
+.facultyheader {
+    font-weight: bold;
+}
+
+span {
+    font-weight: bold;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 235px;
+  max-width: 235px;
+  background-color: rgb(20, 20, 129);
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: rgb(20, 20, 129);
+}
+
+#sidebar ul p {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  background: rgb(20, 20, 129);
+}
+
+#sidebar ul li a:hover {
+  background: #2d4af3;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded='true'] {
+  color: #fff;
+  background: rgb(20, 20, 129);
+}
+
+a[data-toggle='collapse'] {
+  position: relative;
+}
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#sidebar ul li.active > a:hover,
+a[aria-expanded='true'] {
+  color: #fff;
+  background: #2d4af3;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #3d51c5;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
