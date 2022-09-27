@@ -7,7 +7,6 @@
 
 <img src="https://github.com/Oyebamiji-Micheal/Result-Management-System-with-Python-Flask-and-MySQL/blob/master/images/home.png" width="900" height="450">
 <br>
-<img src="https://github.com/Oyebamiji-Micheal/Result-Management-System-with-Python-Flask-and-MySQL/blob/master/images/admin.png" width="900" height="450">
 
 ## Table of Contents
 * [Introduction](#intro)
@@ -167,3 +166,6 @@ Make sure you are in this project's root directory then run the command below <b
 - [Flask](https://flask.palletsprojects.com/en/2.2.x/)
 - [Flask-Admin](https://flask-admin.readthedocs.io/en/latest/index.html)
 - [SQLAlchemy](https://www.sqlalchemy.org/)
+<br>
+
+<img src="https://github.com/Oyebamiji-Micheal/Result-Management-System-with-Python-Flask-and-MySQL/blob/master/images/admin.png" width="900" height="450">
