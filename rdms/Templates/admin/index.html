@@ -1,0 +1,173 @@
+{% extends 'admin/master.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../static/logo.png" />
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% block body %}
+<h1 style="color: blue; font-family: Cambria">University of Nigeria </h1>
+<div>
+    <p align="justify">Welcome to the University of Nigeria Result Management System. This simple project is a result of
+        100 days of SQL challenge I recently started and is dedicted to practicing elementary SQL operations. This
+        website is built using Flask, a micro web framework and is hosted on <a href="https://www.pythonanywhere.com/"
+            target="_blank">PythonAnywhere</a> using a free tier account. Therefore, this website has a lot of limited
+        functionality and should not be assumed to be a perfect website 😭🙏. <strong>A very simple schema was used</strong>. You can find out all this site implements
+        and otherwise in the <a
+            href="https://github.com/Oyebamiji-Micheal/Result-Management-System-with-Flask-and-MySQL"
+            target="_blank">project's repository</a>. If you ever find yourself in this page, this means you are logged
+        in as an admin and either decided to check out things or actually use this site. Given the latter, please adhere
+        to the following admin guide
+    <ul>
+        <li align="justify">
+            <strong>Emails and Passwords:</strong> This website uses simple validations on emails and passwords. Hence, it does not cover functionalities such as changing passwords or checking if an email actually exists. For every new student created, the default password has been set to '1234' and cannot be edited. 
+        </li>
+        <li align="justify"><strong>Adding a new Student:</strong> A new student can be added to the database in the
+            'Users' section. Also, student emails should end with <strong>'stu.edu.ng'</strong>. Emails not
+            ending with <strong>'stu.edu.ng'</strong> will not be recognized. Consequently, results and students profile
+            cannot be created for unrecognized emails. Lastly, do not check the 'admin box' if user is a student.
+        </li>
+        <li align="justify">
+            <strong>Adding a new Admin:</strong> Admin emails should not end with <strong>'stu.edu.ng'</strong>. Also,
+            check the 'admin box' if user is an admin. Student and admin email need not exist. They only need to be
+            properly formatted. Furthermore, deletion is limited. What if someone checks(✔️) all records and deletes
+            them with just a click? 🙁😐
+        </li>
+        <li align="justify">
+            <strong>Course Codes:</strong> Course codes should be six characters long. The first three are uppercase
+            English letters and the rest are numbers. Furthermore, course codes number should start with the current
+            year of a student i.e. a student in the first year (100 level) will offer courses with codes starting with
+            '1' e.g 111, 101, etc.
+        <li>
+            <strong>Faculty and Department:</strong> These are plain text fields. Visit the <a
+                href="/admin/courses">Courses Section</a> to
+            see all sample options for faculty, departments, course codes and course description. The options are not
+            imposed
+            on admins 😇. Feel free to create student profile and result with your own details (users discretion advised).
+            </strong>
+            The table below shows typical student profiles.
+        </li>
+        <br>
+        <div class="table-responsive">
+            <table style="width: auto; background-color: rgb(115, 115, 238); color: black;"
+                class="table table-striped table-condensed table table-bordered">
+                <thead style="background-color: rgb(51, 51, 139)">
+                    <tr style="color: white">
+                        <th class="text-center" scope="col">Name</th>
+                        <th class="text-center" scope="col">Faculty</th>
+                        <th class="text-center" scope="col">Department</th>
+                        <th class="text-center" scope="col">Level</th>
+                        <th class="text-center" scope="col">Sex</th>
+                        <th class="text-center text-nowrap" scope="col">Date of Birth</th>
+                        <th class="text-center" scope="col">Nationality</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mary Jane</td>
+                        <td>Science</td>
+                        <td>Mathematics</td>
+                        <td>100</td>
+                        <td>Female</td>
+                        <td class="text-nowrap">08-11-2002</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Oluwabumni Precious</td>
+                        <td>College of Medicine</td>
+                        <td>Nursing</td>
+                        <td>200</td>
+                        <td>Female</td>
+                        <td>12-02-2003</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Anderson Paul</td>
+                        <td>Science</td>
+                        <td>Chemistry</td>
+                        <td>200</td>
+                        <td>Male</td>
+                        <td>1-05-2000</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Janet Tobi</td>
+                        <td>Science</td>
+                        <td>Statistics</td>
+                        <td>300</td>
+                        <td>Female</td>
+                        <td>10-05-1999</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Ayomide Jeremiah</td>
+                        <td>Science</td>
+                        <td>Computer Science</td>
+                        <td>300</td>
+                        <td>Male</td>
+                        <td>10-05-1998</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Caroline Patterson</td>
+                        <td>College of Medicine</td>
+                        <td>Biochemistry</td>
+                        <td>100</td>
+                        <td>Female</td>
+                        <td>10-05-2003</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Gabriella Zion</td>
+                        <td>Science</td>
+                        <td>Computer Science</td>
+                        <td>300</td>
+                        <td>Female</td>
+                        <td>10-05-2000</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Micheal Smith</td>
+                        <td>Technology</td>
+                        <td>Electrical and Electronics Engineering</td>
+                        <td>400</td>
+                        <td>Male</td>
+                        <td>21-11-1995</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Phoenix Enoch</td>
+                        <td>College of Medicine</td>
+                        <td>Medicine and Surgery</td>
+                        <td>400</td>
+                        <td>Male</td>
+                        <td>04-10-1997</td>
+                        <td>Nigerian</td>
+                    </tr>
+                    <tr>
+                        <td>Richard Simon</td>
+                        <td>Technology</td>
+                        <td>Civil Engineering</td>
+                        <td>300</td>
+                        <td>Male</td>
+                        <td>28-07-2002</td>
+                        <td>Nigerian</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </li>
+    </ul>
+    </p>
+</div>
+{% endblock %}
