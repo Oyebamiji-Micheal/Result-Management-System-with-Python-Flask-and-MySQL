@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Result</title>
+    <link rel="icon" href="static/logo.png" />
+</head>
+
+<body>
+    <!-- page navbar -->
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark" style="background-color: rgb(18, 18, 85)"
+        role="navigation">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" style="color: white; font-size:20px;" href="#">University of Nigeria</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <a href="/logout"><button class="btn btn-danger navbar-btn" onclick="/logout">Logout</button></a>
+        </ul>
+    </nav>
+    <br />
+    <h3 style="color: rgb(18, 18, 192); ">Available Provisional Result For The 2022/2023 Academic Session</h3>
+   
+    <!-- student profile -->
+    <div class="card-body">
+        <h4 class="card-title">Student Profile</h4>
+        {% for student_profile in profile_info %}
+        <strong>Name: </strong>{{student_profile.name}} <br />
+        <strong>Student Email: </strong>{{student_profile.email}} <br />
+        <strong>Department: </strong>{{student_profile.department}} <br />
+        <strong>Faculty: </strong>{{student_profile.faculty}}<br />
+        <strong>Current Level: </strong>{{student_profile.level}}<br />
+        <strong>Nationality: </strong>{{student_profile.nationality}} <br />
+        <strong>Sex: </strong>{{student_profile.sex}} <br />
+        <strong>Date of Birth: </strong>{{student_profile.date_of_birth}} <br />
+        {% endfor %}
+    </div>
+
+    <!-- result table-->
+    <table class="table table-bordered">
+        <thead style="background-color: rgb(44, 44, 165)">
+            <tr style="color: white">
+                <th scope="col">S/N</th>
+                <th scope="col">Code</th>
+                <th scope="col">Description</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for results in student_result %}
+                <tr>
+                    <td>{{ loop.index0 + 1 }}</td>
+                    <td>{{results.code}}</td>
+                    <td>{{results.description}}</td>
+                    <td>{{results.result}}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+
+</html>
