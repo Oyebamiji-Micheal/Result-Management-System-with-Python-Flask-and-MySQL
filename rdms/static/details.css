@@ -1,0 +1,152 @@
+.secondcontainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 15px;
+  margin-top: 15vh;
+  gap: 50px;
+}
+
+.firsttable p,
+.secondtable p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 15px;
+  background: black;
+  padding: 5px;
+  color: silver;
+}
+
+td {
+  padding: 5px;
+  font-size: 16px;
+  color: black;
+  background-color: silver;
+}
+
+@media screen and (max-width: 1170px) {
+ .main {
+    height: 120vh;
+  }
+
+  .bg-image {
+    height: 120vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .secondcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25vh;
+    grid-gap: 0px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .firsttable p,
+  .secondtable p {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 50px;
+  }
+  .secondcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25vh;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .secondtable thead {
+    display: none;
+  }
+  .secondtable td {
+    display: block;
+  }
+  .secondtable td:first-child {
+    color: black;
+    background: black;
+    color: silver;
+    font-weight: bold;
+  }
+  .secondtable td:nth-child(2)::before {
+    content: 'email';
+  }
+  .secondtable td:nth-child(3)::before {
+    content: 'password';
+  }
+  .secondtable td {
+    text-align: center;
+  }
+  .secondtable td::before {
+    float: left;
+    margin-right: 100px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .bg-image {
+    height: 240vh;
+  }
+
+  .main {
+    height: 240vh;
+  }
+}
+
+
+@media screen and (max-height: 1000px) and (max-width: 500px) {
+  .bg-image {
+    height: 250vh;
+  }
+
+  .main {
+    height: 250vh;
+  }
+}
+
+@media screen and (max-height: 600px) and (max-width: 500px) {
+  .bg-image {
+    height: 350vh;
+  }
+  .main {
+    height: 350vh;
+  }
+}
+
+@media screen and (max-height: 400px) and (max-width: 500px) {
+  .bg-image {
+    height: 650vh;
+  }
+  .main {
+    height: 650vh;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+    .bg-image {
+    height: 120vh;
+  }
+
+  .main {
+    height: 120vh;
+  }
+}
+
+
