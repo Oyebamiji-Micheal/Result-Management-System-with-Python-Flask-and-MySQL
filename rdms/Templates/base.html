@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link rel="icon" href="static/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    {% block css %}
+    {% endblock css %}
+</head>
+
+    {% block link %}
+    
+    {% endblock link %}
+
+
+<body>
+<div class="bg-image">
+    <div class="main" 
+    style="background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 50%);">
+        <div class="d-flex justify-content-around">
+            <div><a href="/">HOME</a></div>
+            <div><a href="/about">ABOUT</a></div>
+            <div><a href="/contact">CONTACT</a></div>
+            <div><a href="/details">LOGIN DETAILS</a></div>
+        </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>  -->
+
+        {% block body %}
+        {% endblock body %}
+    </div>
+</div>  
+</body>
+
+</html>
