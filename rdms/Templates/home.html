@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+Log in  
+{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/home.css">
+{% endblock css %}
+
+{% block body %}
+        <div class="c-hero">
+            <div class="c-form-box">
+                <div class="c-button-box">
+                    <div id="btn"></div>
+                    <button type="button" class="c-toggle-btn" onclick="student_login()">Student</button>
+                    <button type="button" class="c-toggle-btn" onclick="admin_login()">Admin</button>
+                </div>
+		
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <div class="flashes">
+                            <p justify="center">{{msg}}</p>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                <form action="/login" method="POST" id="student_login" class="c-input-group">
+                    <input type="email" name="student_email" class="c-input-field" placeholder="Student Email" required>
+                    <input type="password" name="student_password" class="c-input-field" placeholder="Password" required>
+                    <input type="checkbox" class="c-check-box"><span>Remember Password</span>
+                    <button type="submit" class="c-submit-btn" name="student_login">Login</button>
+                </form>
+                <form action="/login" method="POST" id="admin_login" class="c-input-group">
+                    <input type="email" name="admin_email" class="c-input-field" placeholder="Email" required>
+                    <input type="password" name="admin_password" class="c-input-field" placeholder="Password" required>
+                    <input type="checkbox" class="c-check-box" required><span>I agree to the terms & conditions </span>
+                    <button type="submit" class="c-submit-btn" name="admin_login">Login</button>
+                </form>
+
+            </div>
+        </div>
+
+        <script>
+            var x = document.getElementById("student_login");
+            var y = document.getElementById("admin_login");
+            var z = document.getElementById("btn");
+
+            function admin_login() {
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+
+            function student_login() {
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+
+        </script>
+{% endblock body %}
