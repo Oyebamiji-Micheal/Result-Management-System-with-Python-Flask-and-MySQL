@@ -1,0 +1,1215 @@
+{% extends 'admin/master.html' %}
+
+{% block head_css %}
+
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='admin/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <nav class="vertical-nav" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Faculties</h3>
+        </div>
+        <h3 style="margin-left:10px;">Faculties</h3>
+
+        <ul class="list-unstyled components">
+            <li class="active">
+                <a href="#ArtsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Arts</a>
+                <ul class="collapse list-unstyled" id="ArtsSubmenu">
+                    <li>
+                        <a href="#cla">Communication and Language Arts</a>
+                    </li>
+                    <li>
+                        <a href="#history">History</a>
+                    </li>
+                    <li>
+                        <a href="#philosophy">Philosophy</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#MedicineSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">College
+                    of Medicine</a>
+                <ul class="collapse list-unstyled" id="MedicineSubmenu">
+                    <li>
+                        <a href="#biochemistry">Biochemistry</a>
+                    </li>
+                    <li>
+                        <a href="#medicine">Medicine and Surgery</a>
+                    </li>
+                    <li>
+                        <a href="#nursing">Nursing</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#EducationSubmenu" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Education</a>
+                <ul class="collapse list-unstyled" id="EducationSubmenu">
+                    <li>
+                        <a href="#education">Adult Education</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#ScienceSubmenu" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Science</a>
+                <ul class="collapse list-unstyled" id="ScienceSubmenu">
+                    <li>
+                        <a href="#computer">Computer Science</a>
+                    </li>
+                    <li>
+                        <a href="#mathematics">Mathematics</a>
+                    </li>
+                    <li>
+                        <a href="#physics">Physics</a>
+                    </li>
+                    <li>
+                        <a href="#statistics">Statistics</a>
+                    </li>
+                    <li>
+                        <a href="#microbiology">Microbiology</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#SocialScienceSubmenu" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Social Sciences</a>
+                <ul class="collapse list-unstyled" id="SocialScienceSubmenu">
+                    <li>
+                        <a href="#psychology">Psychology</a>
+                    </li>
+                    <li>
+                        <a href="#economics">Economics</a>
+                    </li>
+                    <li>
+                        <a href="#geology">Geology</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#TechnologySubmenu" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Technology</a>
+                <ul class="collapse list-unstyled" id="TechnologySubmenu">
+                    <li>
+                        <a href="#civil">Civil Engineering</a>
+                    </li>
+                    <li>
+                        <a href="#electrical">Electrical and Electronics Engineering</a>
+                    </li>
+                    <li>
+                        <a href="#mechanical">Mechanical Engineering</a>
+                    </li>
+                    <li>
+                        <a href="#petroleum">Petroleum Engineering</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-content p-5" id="content">
+
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-primary rounded-pill shadow-sm px-4 mb-4"><i
+            class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle Sidebar</small></button>
+
+    <div class="row text-black">
+        <a name="cla"></a>
+        <div>
+            <h2 class="facultyheader">FACULTY OF ARTS</h2>
+            <br>
+            <h3>Communication and Language Arts</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                CLA100 Introduction to Speech Composition <br>
+                CLA105 Public Speaking <br>
+                CLA155 Introduction to Digital Media Production <br>
+                CLA181 Elements of Speech-Honors Course <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                CLA200 Introduction to Digital Communication <br>
+                CLA210 Topics in Communication Arts <br>
+                CLA260 Communication and Human Behavior <br>
+                CLA262 Theory and Practice of Argumentation and Debate <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                CLA300 Film Comedy <br>
+                CLA316 Gender and Communication <br>
+                CLA317 Rhetoric and Health <br>
+                CLA345 Online Communication and Personal Relationships <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                CLA400 The Films of Alfred Hitchcock <br>
+                CLA402 Psychology of Communication <br>
+                CLA418 Gender, Sexuality, and the Media <br>
+                CLA451 Television Criticism <br>
+                CLA451 Television Criticism <br>
+            </p>
+            <br>
+            <a name="history"></a>
+            <h3>History</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                HIS130 Introduction to World History <br>
+                HIS160 Engineering Inequality <br>
+                HIS130 Introduction to World History <br>
+                HIS115: Medieval Europe, 410-1500 <br>
+                HIS102 American History, Civil War Era to the Present <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                HIS200 Reproductive Politics in Global Perspective <br>
+                HIS200: War and Forced Displacement <br>
+                HIS201The Afterlives of the War of 1898 in the Caribbean <br>
+                HIS201 Religion in the Age of Hitler <br>
+                HIS225: Jihad Movements in Africa <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                HIS303 A History of Greek Civilization <br>
+                HIS319 The Vietnam Wars <br>
+                HIS347: The Caribbean & Its Diasporas <br>
+                HIS347 The Caribbean & Its Diasporas <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                HIS400 Undergraduate History Symposium <br>
+                HIS404 A History of Disease <br>
+                HIS424 Soviet Union & the World, 1917-1991 <br>
+                HIS476 Medieval Law and Society <br>
+                HIS 500 Post-colonialism, Music, and Globalization <br>
+            </p>
+            <br>
+            <a name="philosophy"></a>
+            <h3>Philosophy</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PHL101 Introduction to Philosophy <br>
+                PHL102 Introduction to Social Philosophy <br>
+                PHL103 Belief, Knowledge, and Truth <br>
+                PHL104 Special Topics in Philosophy for Freshmen <br>
+                PHL181 First. Course for Honors <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                PHL210 Reason in Communication <br>
+                PHL211 Elementary Logic <br>
+                PHL212 Theory of Choice <br>
+                PHL261 Introduction to the Philosophy of Religion <br>
+                PHL264 Classic Texts in Philosophy <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                PHL304 Topics in Philosophy – Humanities <br>
+                PHL305 Topics in Philosophy – Social Science <br>
+                PHL341 Contemporary Moral Issues <br>
+                GEL301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                PHL430 History of Ancient Philosophy <br>
+                PHL431 Medieval Philosophy <br>
+                PHL432 History of Modern Philosophy <br>
+                PHL433 19th Century Philosophers <br>
+                PHL435 Jewish Philosophy from Antiquity to the Seventeenth Century <br>
+                PHL439 American Philosophy <br>
+                <br><br>
+                <a name="biochemistry"></a>
+            <h2 class="facultyheader">COLLEGE OF MEDICINE</h2>
+            <br>
+            <h3>Biochemistry</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                BIC101 Metals And Their Compounds <br>
+                BIC104 Molecules To Life And The Nature Of Science <br>
+                BIC156 Organic Chemistry I <br>
+                BIC176 Inorganic Chemistry I <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                BIC201 Metals And Their Compounds II <br>
+                BIC203 Rates Of Chemical Reactions <br>
+                BIC256 Organic Chemistry II <br>
+                BIC276 Inorganic Chemistry II <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                BIC323 Principles Of Human Disease And Biotechnology <br>
+                BIC324 Non Metals <br>
+                BIC325 Protein And Enzyme Structure And Function <br>
+                BIC326 Mathematical Methods For Systems Biology <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                BIC421 Plant Biochemistry <br>
+                BIC425 Mechanisms Of Action Of Vitamins And Minerals <br>
+                BIC435 Molecular Control Of Metabolism And Metabolic Disease <br>
+                BIC451 Biochemical Methods <br>
+                BIC453 Biophysical Chemistry <br>
+            </p>
+            <br>
+            <a name="medicine"></a>
+            <h3>Medicine and Surgery</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                BIO101 General Biology for Medical Students <br>
+                BIO151 General Biology I <br>
+                CHE101 Basic Principles of Chemistry <br>
+                CHE171 Basic Practical Chemistry <br>
+                PHY101 General Physics for Life Sciences I <br>
+                PHY191 Practical Physics I <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                ANT205 Histology and Histochemistry <br>
+                BIC201 Introduction to Biochemistry <br>
+                BIC202 Chemistry of Biological Molecules <br>
+                PHS201 General Principles of Blood and Body Fluids <br>
+                PHS202 Muscles, Nerves and Autonomic Nervous System <br>
+                PHL231 Introduction to Logic I <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                BIC301 Nutritional Biochemistry <br>
+                BIC302 Special Topics in Biochemistry <br>
+                PYS301 Endocrinology and Reproductive Physiology <br>
+                PYS302 Neurophysiology <br>
+                PYS303 Special Senses <br>
+                MED301 Introduction to Clinical Medicine <br>
+                MED302 Cardiology <br>
+                MED304 Respiratory Medicine I <br>
+                MED305 Gastroenterology <br>
+                MED306 Clinical Haematology <br>
+                MED307 Metabolic Disorders and Endocrine Diseases <br>
+                MED308 Neurology I <br>
+                MED309 Nephrology I <br>
+                MED310 Diagnostic Radiology in Medical Practice <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                PHA401 Antimicrobial, Antifungal, Antiviral, Antiprotozoal Agents <br>
+                PHA403 Drugs Acting on the CNS <br>
+                PHA405 Practicals and Demonstrations <br>
+                MIC401 Medical Protozoology <br>
+                MIC402 Practical Protozoology <br>
+                MIC403 Medical Helminthology <br>
+                MIC404 Applied Medical Microbiology <br>
+                MIC405 Medical Entomology <br>
+                CPY401 Clinical Chemistry <br>
+                CPY402 Human Nutrition <br>
+                CPY403 Practical Laboratory <br>
+                HEM401 General Haematology <br>
+                HEM402 Blood Transfusion <br>
+                HEM403 Practical Haematology <br>
+                PAT401 System Pathology <br>
+                PAT402 Histopathology <br>
+                PAT403 Forensic Medicine <br>
+                <br>
+                <span>
+                    500 Level <br>
+                </span>
+                ANE501 Resuscitation, Principles and Practice of Anaesthesiology <br>
+                ANE502 Clinicals in Anaesthesiology <br>
+                SUG505 E.N.T. <br>
+                SUG506 Ophthalmology <br>
+                SUG507 Orthopaedics <br>
+                MED503 Dermato-venereology <br>
+                MED502 Psychiatry <br>
+                RAD501 Tutorials in Radiology <br>
+                <br>
+                <span>
+                    600 Level <br>
+                </span>
+                MED601 Cardiology II <br>
+                MED602 Respiratory Medicine II <br>
+                MED603 Gastroenterology II <br>
+                MED604 Nephrology II <br>
+                MED605 Rheumatology and Rehabilitation <br>
+                MED606 Clinical Immunology <br>
+                MED607 Neurology II <br>
+                MED608 Tropical Medicine and Infectious Diseases <br>
+                SUG601 Solid Tumours and Other Neoplasms <br>
+                SUG602 Cardiothoracic and Vascular Surgery <br>
+                SUG603 Paediatric Surgery <br>
+                SUG604 Neurosurgery <br>
+                MED609 Therapeutics of Common Medical and surgical Disorders <br>
+            </p>
+            <br>
+            <a name="nursing"></a>
+            <h3>Nursing</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                NUR110 Health and Healing I: Living Health <br>
+                NUR111 Professional Practice I: Introduction to the Profession of Nursing <br>
+                NUR113 Relational Practice: Self and Other <br>
+                BIO181 Introductory Human Anatomy and Physiology 1 <br>
+                NUR120 Health & Healing II: Health Indicators <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                NUR210 Health & Healing III: Health Challenges and Healing Initiatives <br>
+                NUR213 Relational Practice II: Creating Health and Promoting Relationships <br>
+                NUR215 Nursing Practice III: Promoting Health and Healing <br>
+                NUR221 Professional Practice III: Nursing Ethics <br>
+                NUR236 Consolidated Practice Experience II <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                NUR310 Health and Healing V: Complex Health Challenges/Healing Initiatives <br>
+                NUR313 Relational Practice III: Connecting Across Difference <br>
+                NUR315 Nursing Practice V: Promoting Health and Healing <br>
+                NUR341 Professional Practice IV: Nursing Inquiry <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                NUR430 Professional Practice V: Leadership in Nursing <br>
+                NUR435 Professional Practice VI: Nursing Research <br>
+                NUR431 Nursing Practice VII: Engaging in Leadership <br>
+                NUR475 Consolidated Practice V <br>
+                NUR491 Nursing Practice VIII: Transitions <br>
+                <br><br>
+            </p>
+            <a name="education"></a>
+            <h2 class="facultyheader">FACULTY OF EDUCATION</h2>
+            <br>
+            <h3>Adult Education</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                ADE101 Introduction to Adult and Non-Formal Education <br>
+                ADE111 Adult Learning and Group Behaviour <br>
+                ADE121 Adult Education and Community Development <br>
+                ADE131 Structures in Adult Education <br>
+                ADE141 Historical Background of Adult Literacy Education <br>
+                ADE151 Introduction to Distance Education <br>
+                ADE161 Introduction to Labour and Cooperative Education <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                ADE201 Philosophy of Adult Education <br>
+                ADE221 Socio-Cultural Aspects of Community Dev. <br>
+                ADE231 Policy and Design in Adult Education <br>
+                ADE241 Indigenous Communication Strategies in Adult Edu. <br>
+                ADE251 Foundations of Extension Education <br>
+                ADE261 Cooperative Edu. and Adults Experiential Learning <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                ADE313 Learning Teaching and Communication <br>
+                ADE321 Community Development: Theory and Practice I <br>
+                ADE323 Situation Analysis and Interaction in Adult Edu. <br>
+                ADE325 Community Education <br>
+                ADE327 Economics of Adult Edu., Community Dev. & S.W <br>
+                ADE331 Financing Adult Education 2 <br>
+                ADE371 Research and Evaluation in Adult Education <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                ADE411 Motivation in Adult Education <br>
+                ADE421 Community Development: Theory & Practice II <br>
+                ADE423 Rural Sociology <br>
+                ADE425 Issues in Environmental Adult Education <br>
+                ADE427 Population Trends and Policies <br>
+                ADE435 Adult Education and International Scene <br>
+                <br><br>
+            </p>
+            <a name="computer"></a>
+            <h2 class="facultyheader">FACULTY OF SCIENCE</h2>
+            <br>
+            <h3>Computer Science</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                CSC102 Introduction to Computing <br>
+                CSC103 Introduction to Programming <br>
+                MAT111 Algebra <br>
+                MAT121 Calculus and Trigonometry <br>
+                MAT141 Analytical Geometry and Mechanics <br>
+                STA115 Introduction to Probability Theory I <br>
+                STA121 Statistical Inference I <br>
+                PHY102 Introductory Mechanics and Properties of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                PHY118 Experimental Physics I <br>
+                GES101 Use of English <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                GES201 Use of English II <br>
+                CSC213 Digital Logic Design <br>
+                CSC222 Digital Communication Systems <br>
+                CSC235 Object Oriented Programming <br>
+                CSC293 Web Programming <br>
+                CSC231 Scientific Programming <br>
+                CSC236 Introduction to Algorithms <br>
+                CSC242 Foundations of Computer Science <br>
+                CSC272 Information Management Systems <br>
+                CSC299 Industrial Training <br>
+                MAT213 Algebra I <br>
+                MAT223 Analysis <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                GES301 Use of English III <br>
+                CSC321 Computer Operating Systems I <br>
+                CSC322 Principles of Data Communication <br>
+                CSC331 Programming Principles and Paradigms <br>
+                CSC334 Systems Programming <br>
+                CSC335 Software Engineering <br>
+                CSC341 Data Structures <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                CSC472 Database Systems <br>
+                CSC412 Microprocessor Interfacing <br>
+                CSC421 Computer Operating Systems II <br>
+                CSC431 Compiling Techniques <br>
+                CSC475 Professional Ethics for Computer Science <br>
+                CSC476 Research Methods in Computer Science <br>
+                CSC499 Industrial Training III <br>
+                <br>
+                <span>
+                    500 Level <br>
+                </span>
+                CSC531 Human-Computer Interaction <br>
+                CSC532 Concurrency Modeling and Programming
+                CSC533 Smart and Mobile Applications <br>
+                CSC551 Design and Analysis of Algorithms <br>
+                CSC552 Theory of Computation <br>
+                CSC554 Semantics of Programming Languages <br>
+                CSC583 Computer and Information Security <br>
+                CSC584 ICT for Development <br>
+                CSC553 Fuzzy Logic and Applications <br>
+                CSC571 Constraints Programming <br>
+                CSC572 Machine Learning <br>
+                CSC573 Logic and Automated Reasoning <br>
+                CSC574 Intelligent Systems <br>
+            </p>
+            <br>
+            <a name="mathematics"></a>
+            <h3>Mathematics</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                MAT111 Algebra <br>
+                MAT121 Calculus and Trigonometry <br>
+                MAT141 Analytic Geometry and Mechanics <br>
+                MAT142 Introduction to Actuarial Mathematics <br>
+                STA115 Introduction to Probability Theory I <br>
+                STA121 Statistical Inference I <br>
+                PHY102 Introductory Mechanics and Properties of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                MAT211 Abstract Algebra <br>
+                MAT212 Linear Algebra <br>
+                MAT221 Analysis I <br>
+                MAT222 Analysis II <br>
+                MAT223 Analysis for Non-Major <br>
+                MAT242 Vectorial Mechanics <br>
+                MAT241 Ordinary Differential Equations <br>
+                MAT251 Numerical Analysis, Theory and Practical <br>
+                MAT253 Introduction to Operation Research <br>
+                STA211 Probability <br>
+                STA221 Statistical Inference II <br>
+                GES102 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                MAT311 Group and Rings <br>
+                MAT312 Theory of Modules <br>
+                MAT321 Analysis III <br>
+                MAT322 Analysis IV <br>
+                MAT323 Complex Analysis <br>
+                MAT341 Mathematical Methods I <br>
+                MAT342 Mathematical Methods II <br>
+                MAT343 Vectors and Tensors <br>
+                MAT331 Differential Geometry <br>
+                MAT351 Numerical Analysis <br>
+
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                MAT401 Advanced Algebra I <br>
+                MAT402 Advanced Algebra II <br>
+                MAT403 Topology I <br>
+                MAT405 Advanced Analysis I <br>
+                MAT406 Advanced Analysis II <br>
+                MAT407 Complex Analysis <br>
+                MAT410 Ordinary Differential and Integral Equations <br>
+                MAT411 Partial Differential Equations <br>
+                MAT412 Introduction to Measure and Probability <br>
+                MAT414 Continuum Mechanics <br>
+                MAT416 Numerical Analysis <br>
+                MAT417 Modelling III <br>
+                MAT418 Operations Research <br>
+                MAT420 Fluid Mechanics <br>
+            </p>
+            <br>
+            <a name="physics"></a>
+            <h3>Physics</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PHY102 Mechanics and Property of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                PHY107 Ideas of Modern Physics <br>
+                PHY118 Experimental Physics <br>
+                PHY115 Energy <br>
+                MAT111 Algebra <br>
+                MAT121 Calculus and Trigonometry <br>
+                MAT141 Analytical Geometry and Mechanics <br>
+                STA115 Introduction to Probability Theory I <br>
+                STA121 Statistical Inference I <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                PHY202 General Physics <br>
+                PHY205 Mod Physics for Engineers <br>
+                PHY206 Special Topics in Physics <br>
+                PHY235 Intro-Solid State Electronics <br>
+                PHY247 A Modern Intro to Physics <br>
+                PHY265 Intro-Medical Physics <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                PHY301 Physics Today <br>
+                PHY307 Intmed Lab-Mech&Mod Physics <br>
+                PHY311 Mechanics <br>
+                PHY321 Elect Circuits & Electronic <br>
+                PHY322 Electromagnetic Fields <br>
+                PHY325 Optics <br>
+                PHY371 Acoustics for Musicians <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                PHY401 Radiation Physics & Dosimetry <br>
+                PHY407 Advanced Laboratory <br>
+                PHY415 Thermal Physics <br>
+                PHY425 Introduction to Plasmas <br>
+                PHY448 Atomic and Quantum Physics <br>
+                PHY449 Atomic and Quantum Physics <br>
+                PHY485 Intro to Atomic Structure <br>
+                PHY486 Lasers <br>
+                PHY497 Graduate Laboratory <br>
+                <br>
+            </p>
+            <a name="statistics"></a>
+            <h3>Statistics</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PHY102 Mechanics and Property of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                PHY107 Ideas of Modern Physics <br>
+                PHY118 Experimental Physics <br>
+                PHY115 Energy <br>
+                STA111 General Statistics I <br>
+                STA112 Introduction to Probability Theory I <br>
+                STA121 Statistical Inference I <br>
+                STA131 Statistical Computing I <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                STA201 Statistics for Biological Science <br>
+                STA202 Statistics for physical sciences and Engineering <br>
+                STA203 Statistics for the Social Sciences <br>
+                STA211 Probability II <br>
+                STA212 Social and Economic Statistics <br>
+                STA221 Statistical Inference II <br>
+                STA231 Statistical Computing II <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                STA311 Probability and stochastic processes I <br>
+                STA312 Distribution Theory I <br>
+                STA316 Introduction to Environmental Statistics <br>
+                STA321 Statistical Inference III <br>
+                STA322 Regression and Analysis of Variance I <br>
+                STA323 Design and Analysis of Experiments <br>
+                STA324 Survey Methods and Sampling Theory <br>
+                STA331 Introduction to Basic Programming <br>
+                STA341 Statistical Quality Control <br>
+                STA315 TIME SERIES ANALYSIS I <br>
+                STA326 Introduction to Stochastic Processes I <br>
+                STA342 Demography I <br>
+                STA343 Operation Research I <br>
+                STA351 Biometric Methods I <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                STA411 Probability and stochastic processes I <br>
+                STA412 Distribution Theory II <br>
+                STA413 LINEAR MODELS <br>
+                STA414 STOCHASTIC PROCESSES II <br>
+                STA415 Regression and Analysis of Variance II <br>
+                STA421 Time series Analysis II <br>
+                STA422 Logical Background of Statistics and Analysis of Theory <br>
+                STA423 Design and Analysis of Experiments II <br>
+                STA424 Sampling Techniques <br>
+                STA441 Multivariate Statistical Methods <br>
+                STA442 Non-Parametric Methods <br>
+                STA443 Operation Research II <br>
+                STA444 Econometric Methods <br>
+                STA451 Biometric Methods II <br>
+                STA452 Psychometric Methods <br>
+            </p>
+            <br>
+            <a name="microbiology"></a>
+            <h3>Microbiology</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PHY102 Mechanics and Property of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                PHY107 Ideas of Modern Physics <br>
+                PHY118 Experimental Physics <br>
+                MCB100 The Microbial World <br>
+                MCB101 General Microbiology <br>
+                MCB102 General Microbiology Laboratory <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                PHY202 General Physics <br>
+                MCB242 Cell <br>
+                MCB243 Host-Parasite Interactions <br>
+                MCB251 Introduction to Disease Biology <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                MCB303 Biology of Micro-organisms <br>
+                MCB304 Biology of Micro-organisms Laboratory <br>
+                MCB305 Critical Analysis in Microbiology <br>
+                MCB325 Food Microbiology <br>
+                MCB335 The Microbiome of Plants, Animals, Humans <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                MCB425 Environmental Microbiology <br>
+                MCB450 Diversity, Ecology, and Evolution of Micro-organisms <br>
+                MCB470 Microbial Genetics <br>
+                MCB483 Soil Microbiology and Biochemistry <br>
+                MCB497 Advanced Laboratory Techniques in Microbiology <br>
+                <br><br>
+                <a name="psychology"></a>
+            <h2 class="facultyheader">FACULTY OF SOCIAL SCIENCES</h2>
+            <br>
+            <h3>Psychology</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PSC101 General Psychology <br>
+                PSC170 Psychology Introductory Statistics Lab <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                PSC201 Psychological Measurements and Statistics <br>
+                PSC210 Introduction to Life-Span Developmental Psychology for Nursing Students <br>
+                PSC215 Research Methods and Designs in Psychology <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                BPSC301 Developmental Psychology: Conception Through Adolescence <br>
+                PSC312 Developmental Psychology: Adulthood and Aging <br>
+                PSC321 Introductory Social Psychology <br>
+                PSC323 The Psychology of Prejudice <br>
+                PSC325 Human Sexuality <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                PSC432 Learning and Memory <br>
+                PSC433 Human Factors Engineering <br>
+                PSC435 Death and Dying <br>
+                PSYC 482 Applied Behavioral Analysis <br>
+            </p>
+            <br>
+            <a name="economics"></a>
+            <h3>Economics</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                ECO101 Principles of Economics <br>
+                ECO102 Understanding the Welfare System <br>
+                ECO103 Introduction to Statistical Methods (Postcalculus) for Social Scientists <br>
+                ECO104 Applied Econometrics <br>
+                ECO105 Money and Banking <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                ECO201 Microeconomics I <br>
+                ECO210 Macroeconomics I <br>
+                ECO213 Industrial Organization 1 <br>
+                ECO223 The Engineering Economics of Electricity Markets <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                ECO303 Macroeconomic Workshop <br>
+                ECO321 International Trade Workshop I <br>
+                ECO351 Econometrics Workshop <br>
+                ECO352 Microeconomic Theory Seminar <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                ECO412 Microeconomic Theory Seminar <br>
+                ECO431 Advanced Macroeconomics I <br>
+                ECO452 Economics of Gender <br>
+                <br>
+            </p>
+            <a name="geology"></a>
+            <h3>Geology</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                GEO110 Planet Earth <br>
+                GEO113 Building a Habitable Planet <br>
+                GEO130 Extra-Terrestrial Geoscience <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                GEO250 Sedimentary Geology II <br>
+                GEO251 Structural Geology II <br>
+                GEO252 Igneous and Metamorphic Geology II <br>
+                GEO254 Mineral Resources <br>
+                GEO255 Geochemistry II <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                GEO255 Geophysics II <br>
+                GEO303 Tectonics III <br>
+                GEO306 Igneous and Metamorphic Geology III <br>
+                GEO309 Field Geoscience Program III <br>
+                GEO302 Geophysics IIIA: Potential Fields and Geothermics <br>
+                GEO303 Geophysics IIIB: Electromagnetics and Seismology <br>
+                GEO350 Exploration Methods III <br>
+                GEO352 Mineral and Energy Resources III <br>
+                GEO355 Earth Systems History III <br>
+                GEO355 Energy Resources III <br>
+                GEO355 Mineral Resources III <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                GEO401 Advanced Geology <br>
+                GEO403 Advanced Geophysics <br>
+                GEO407 Advanced Environmental Geoscience <br>
+                <br><br>
+            </p>
+            <a name="civil"></a>
+            <h2 class="facultyheader">FACULTY OF TECHNOLOGY</h2>
+            <br>
+            <h3>Civil Engineering</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                CSC101 Introduction to Computing Non Major <br>
+                MAT121 Calculus and Trigometry <br>
+                STA141 Statistical Theory <br>
+                PHY102 Introductory Mechanics and Properties of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                TME109 - Civil & Environmental Engineering <br>
+                TME118 Computer Aided Design & Drafting <br>
+                CHE101 Basic Principles of Chemistry <br>
+                GES101 Use of English <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                GES201 Use of English II <br>
+                TME202 Civil Engineering Design II <br>
+                TME203 Structural Design 1 <br>
+                TME204 Structural Mechanics <br>
+                TME208 Soil Mechanics I <br>
+                MAT242 Ordinary Differential Equations <br>
+                TME215 Mechanics of Fluids I <br>
+                TME227 Strength of Materials I <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                GES301 Use of English III <br>
+                TME302 Structural Analysis <br>
+                TME303 Structural Design II <br>
+                TME304 Foundation Engineering <br>
+                TME327 Strength of Materials <br>
+                TME351 Construction Engineering & Management <br>
+                TME356 Highway Design <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                TME415 Fluid Mechanics IV <br>
+                TME462 Analysis and Design of Buildings <br>
+                TME473 Steel Structures <br>
+                TME477 Concrete Technology <br>
+                TME485 Introduction to Rock Mechanics <br>
+                TME486 Improvement of Geotechnical Materials <br>
+                <br>
+            </p>
+            <a name="electrical"></a>
+            <h3>Electrical and Electronics Engineering</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                MAT111 Algebra <br>
+                MAT121 Calculus and Trigonometry <br>
+                MAT141 Analytic Geometry and Mechanics <br>
+                MAT142 Introduction to Actuarial Mathematics <br>
+                STA141 Statistical Theory <br>
+                PHY102 Introductory Mechanics and Properties of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                EEE101 Introduction to Electrical Electronics Engineering
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                EEE211 Basic Electrical Engineering I <br>
+                EEE212 Engineering Drawing I <br>
+                EEE213 Workshop Technology I <br>
+                EEE214 Basic Fluid Mechanics <br>
+                EEE217 Strength of Materials <br>
+                EEE218 Engineering Thermodynamics <br>
+                EEE219 Engineering Computer Programming <br>
+                EEE210 Engineering Laboratory 1 <br>
+                GES102 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                ENG311 Engineering Mathematics III <br>
+                ENG312 Energy Technology 1 <br>
+                EEE310 Electrical Circuit Theory I <br>
+                EEE311 Electrical Machines I <br>
+                EEE312 Electronic Engineering I <br>
+                EEE313 Electrical/Electronic Laboratory I <br>
+                EEE314 Electromagnetic Field Theory <br>
+                EEE315 Measurements & Instrumentation I <br>
+                EEE316 Electrical Properties of Materials <br>
+                MAT323 Complex Analysis <br>
+                MAT331 Differential Geometry <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                ENG411 Technical Report Writing and Presentation <br>
+                EEE410 Electric Energy Generation, Installation & Utilization <br>
+                EEE411 Electrical Machines III <br>
+                EEE412 Measurements & Instrumentation II <br>
+                EEE413 Electrical/Electronics Laboratory III <br>
+                EEE414 Communication Principles II <br>
+                EEE415 Control Theory <br>
+                EEE416 Electronic Circuits I <br>
+                EEE417 Electrical Engineering Mathematical Methods <br>
+            </p>
+            <br>
+            <a name="mechanical"></a>
+            <h3>Mechanical Engineering</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PHY102 Mechanics and Property of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                PHY118 Experimental Physics <br>
+                MEC101 Introduction to Engineering<br>
+                MEC102 Applied Mechanics <br>
+                MAT111 Algebra <br>
+                MAT121 Calculus and Trigonometry <br>
+                MAT141 Analytical Geometry and Mechanics <br>
+                STA141 Statistical Theory <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                EEE211 Basic Electrical Engineering <br>
+                MEC211 Engineering Drawing I <br>
+                PHY247 A Modern Intro to Physics <br>
+                MEC261 Thermodynamic I <br>
+                EEE214 Basic Fluid Mechanics <br>
+                MEC281 Measurements & Instrumentation I <br>
+                MEC212 Work Technology I <br>
+                MAT214 Engineering Mathematics II <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                ENG311 Engineering Mathematics III <br>
+                MEC315 Mechanical Engineering Laboratory I <br>
+                MEC341 Mechanics of machine I <br>
+                MEC361 Thermodynamics II <br>
+                MEC391 Metallurgy <br>
+                MEC331 Advanced Strength of Materials <br>
+                PHY322 Electromagnetic Fields <br>
+                MEC351 Mechanics of Fluids I <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                MEC418 Mechanics of Engineering Design II <br>
+                MEC441 Mechanics of machines II <br>
+                MEC442 Automatic Control <br>
+                MEC451 Applied Fluid Mechanics <br>
+                MEC461 Applied Thermodynamics <br>
+                MEC471 Heat and Mass Transfer <br>
+                MEC431 Theory of Elasticity <br>
+                MEC419 Mechanical Engineering Laboratory II <br>
+                MEC481 Technology Development Policy <br>
+                <br>
+            </p>
+            <br>
+            <a name="petroleum"></a>
+            <h3>Petroleum Engineering</h3>
+            <p>
+                <span>
+                    BSc <br>
+                    Course Titles and Descriptions <br>
+                    <br>
+                    100 Level <br>
+                </span>
+                PET106 Introduction to Petroleum Engineering <br>
+                PHY102 Mechanics and Property of Matter <br>
+                PHY103 Introductory Heat and Thermodynamics <br>
+                CHE108 Applied Chemistry
+                CHE156 Organic Chemistry <br>
+                CHE176 Inorganic Chemistry <br>
+                GES101 Use of English I <br>
+                <br>
+                <span>
+                    200 Level <br>
+                </span>
+                PET201 Reservoir Thermodynamics & Fluid Properties <br>
+                PET205 Sedimentology & Stratigraphy for Petrol Engineers <br>
+                PET209 Formation Evaluation, Petrophysics & Rock Properties <br>
+                PET213 Drilling Engineering <br>
+                PET223 Petroleum Economics Social and Economic Statistics <br>
+                PET225 Corrosion Science, Prevention and Control <br>
+                PET231 Safety and Environmental Control in Petroleum Industry <br>
+                GES201 Use of English II <br>
+                <br>
+                <span>
+                    300 Level <br>
+                </span>
+                MAT311 Advanced Algebra <br>
+                MEC311 Engineering Drawing II <br>
+                PET301 Advanced Petroleum Production Technology <br>
+                PET303 Reservoir Engineering <br>
+                PET304 Petroleum Equipment, Operation and Maintenance <br>
+                PET305 Advanced Petroleum Drilling Technology <br>
+                PET323 Production Engineering <br>
+                PET352 Structural Geology & Seismic Methods <br>
+                GES301 Use of English III <br>
+                <br>
+                <span>
+                    400 Level <br>
+                </span>
+                PET401 Applied Thermodynamics <br>
+                PET403 Drilling Design Technology <IIbr>
+                    PET405 Petroleum Economics <br>
+                    PET407 Petroleum Reservoir Analysis II <br>
+                    PET408 Corrosion Science Prevention and <br>
+                    PET409 Petroleum Processing Technology <br>
+                    PET411 Stratigraphy and Sedimentology II <br>
+            </p>
+            <br>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<!-- End demo content -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+        });
+    });
+</script>
+{% endblock body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
