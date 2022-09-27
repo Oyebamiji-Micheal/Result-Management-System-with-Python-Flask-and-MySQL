@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 # Set app secret key
 # Keep this private!
-app.secret_key = 'f2e0c2ac806d947324d5c875ec1cc96dd0a89c88f2a317e6fc23a674697755af'
+app.secret_key = '**********'
 
 # Change this URI if you are working with this project on your machine
 # Configure database connection 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3325/mysqlproject' 
+app.config['SQLALCHEMY_DATABASE_URI'] = '**********'
 
 # Suppress warnings 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
