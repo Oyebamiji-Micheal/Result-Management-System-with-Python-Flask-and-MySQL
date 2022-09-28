@@ -62,6 +62,7 @@ def validate_course_code(course_code):
             Second element is an error message stating why the 
             condition fails.  
     """
+    course_code = course_code.strip()
     first_integer = -1
     for char in course_code:
         if char.isdigit():
