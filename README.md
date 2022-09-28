@@ -1,7 +1,7 @@
 # Result Management System with Python Flask and MySQL
 <br>
 
-<a href="http://rmsnigeria.pythonanywhere.com/" target="_blank">http://rmsnigeria.pythonanywhere.com/
+<a href="https://rmsnigeria.pythonanywhere.com/" target="_blank">https://rmsnigeria.pythonanywhere.com/
 </a>
 <br>
 
