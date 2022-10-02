@@ -62,7 +62,7 @@ MySQL database and Xampp server was used while working on this project locally. 
 
 <a id='guide'></a>
 ## Student and Admin Guide
-You can find the website's usage guide here(link to be added later).
+You can find the website's usage guide [here](https://github.com/Oyebamiji-Micheal/Result-Management-System-with-Python-Flask-and-MySQL/blob/master/guide.md).
 <br><br>
 
 <a id='local'></a>
