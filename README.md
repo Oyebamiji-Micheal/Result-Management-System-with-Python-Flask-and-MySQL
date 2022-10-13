@@ -76,6 +76,11 @@ Virtual environment. It is advisable to run this project inside of a virtual env
 **Windows** (cmd) <br>
 ```
 cd Result-Management-System-with-Python-Flask-and-MySQL
+pip install virtualenv
+python -m virtualenv venv
+```
+or
+```
 python3 -m venv venv
 ```
 
@@ -90,7 +95,7 @@ python -m virtualenv venv
 **Windows** (cmd)
 
 ```
-venv/Scripts/activate
+venv\scripts\activate
 ```
 
 **macOS/Linux**
