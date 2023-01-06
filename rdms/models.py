@@ -24,6 +24,7 @@ login_manager.login_view = 'login'
 def load_user(user_id):
     return Users.query.get(int(user_id))
 
+
 # Handle unauthorized requests to admin page from users
 @app.errorhandler(403)
 def not_found_error(error):
@@ -33,6 +34,7 @@ def not_found_error(error):
     """
     return render_template('403.html')
 
+
 # Handle page not found error (404)
 @app.errorhandler(404)
 def not_found_error(error):
@@ -41,6 +43,7 @@ def not_found_error(error):
     Render 404.html template
     """
     return render_template('404.html')  
+
 
 class Users(UserMixin, db.Model):
     """
@@ -111,16 +114,19 @@ class Profiles(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(100), db.ForeignKey('students.email'), 
-                      nullable=False, unique=True)
+    email = db.Column(
+        db.String(100), db.ForeignKey('students.email'), nullable=False, 
+        unique=True
+    )
     faculty = db.Column(db.String(100), nullable=False)
     department = db.Column(db.String(100), nullable=False)
     level = db.Column(db.Integer, nullable=False)
     sex = db.Column(db.String(20), nullable=False)
     date_of_birth = db.Column(db.Date(), nullable=False)
     nationality = db.Column(db.String(100), nullable=False, default='Nigerian')
-    last_updated = db.Column(db.DateTime(), default=datetime.utcnow, 
-                             onupdate=datetime.utcnow)
+    last_updated = db.Column(
+        db.DateTime(), default=datetime.utcnow, onupdate=datetime.utcnow
+    )
     student_details = db.relationship('Results', backref='student_detail')
 
     def __repr__(self) -> str:
@@ -140,8 +146,9 @@ class Results(db.Model):
     """
 
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(100), db.ForeignKey('profiles.email'), 
-                      nullable=False)
+    email = db.Column(
+        db.String(100), db.ForeignKey('profiles.email'), nullable=False
+    )
     code = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(200), nullable=False)
     result = db.Column(db.Integer, nullable=False) 

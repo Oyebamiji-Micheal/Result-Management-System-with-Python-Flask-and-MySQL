@@ -12,6 +12,7 @@ from rdms.models import Users
 def index():
     return render_template('home.html')
 
+
 # Handle student and admin login
 @app.route('/login', methods=['POST', 'GET']) 
 def login():
@@ -21,11 +22,13 @@ def login():
         # At first assume the user is a student 
         student_email = request.form.get('student_email')
         # If student_email from home.html is not 'None' then user is a student
+
         if student_email:
             # Query Users table against student email and password
             student_password = request.form.get('student_password')
             student = Users.query.filter_by(email=student_email).first()
             # Check if the student email is valid along with the password  
+            
             if (student and 
                 check_password_hash(student.password, student_password) and 
                 student_email.endswith('stu.edu.ng')):
@@ -44,6 +47,7 @@ def login():
             admin_password = request.form.get('admin_password')
             admin = Users.query.filter_by(email=admin_email).first()
             # Check if admin account is valid
+
             if admin and check_password_hash(admin.password, admin_password):
                 login_user(admin, remember=True)
                 return redirect(url_for('admin.index')) 
@@ -51,24 +55,29 @@ def login():
             else:
                 flash('Invalid Login Details. Retry') 
                 return redirect(url_for('index')) 
+
     else:
         # If request method is not POST redirect to home page
         return redirect(url_for('index')) 
+
 
 @app.route('/about')
 def about():
     """Render about.html file."""
     return render_template('about.html')
 
+
 @app.route('/contact')
 def contact():
     """Render contact.html file."""
     return render_template('contact.html')
 
+
 @app.route('/details')
 def details():
     """Render details.html file."""
     return render_template('details.html')
+
 
 @app.route('/result')
 @login_required
@@ -77,21 +86,26 @@ def result():
     user_email = current_user.email
     # Query 'profiles' table for student profile details
     profile_info = db.engine.execute(
-                        f"SELECT * FROM `profiles` \
-                        WHERE email = '{user_email}'") 
+        f"SELECT * FROM `profiles` WHERE email = '{user_email}'"
+    ) 
     # Query 'results' table for distinct student results
     student_result = db.engine.execute(
-                        f"SELECT DISTINCT code, description, result \
-                        FROM `results` WHERE email = '{user_email}'") 
+        f"SELECT DISTINCT code, description, result \
+        FROM `results` WHERE email = '{user_email}'"
+    ) 
+
     return render_template(
-            'result.html', 
-            profile_info=profile_info, 
-            student_result=student_result)
+        'result.html', 
+        profile_info=profile_info, 
+        student_result=student_result
+    )
+
 
 # Handle page not found error (404)
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('404.html')  
+
 
 @app.route('/logout')
 def logout():
